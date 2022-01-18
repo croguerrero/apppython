@@ -3,5 +3,5 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'SlopeIT DevOps'
+    return 'SlopeIT DevOps Up and Running! '
 
