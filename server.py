@@ -1,23 +1,16 @@
-import tornado.ioloop
-import tornado.web
+import os
+
+from flask import Flask
+
+app = Flask(__name__)
 
 
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        title = "Welcome to jungle"
-        bgcolor = "dodgerblue"
-        self.render("template.html", title=title, bgcolor=bgcolor)
-        print(self.request)
-
-
-def make_app():
-    return tornado.web.Application([
-        (r"/", MainHandler),
-    ])
+@app.route("/")
+def hello_world():
+    name = os.environ.get("NAME", "Slope IT")
+    return "Build {}!".format(name)
 
 
 if __name__ == "__main__":
-    app = make_app()
-    app.listen(8888)
-    tornado.ioloop.IOLoop.current().start()
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
