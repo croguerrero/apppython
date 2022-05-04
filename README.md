@@ -2,14 +2,14 @@
 
 ![image](https://user-images.githubusercontent.com/32203163/166609659-73bd9d2a-7dcc-4185-bdd8-4902824c14c1.png)
 
-#Objectives
+## Objectives
 1. Create a simple REST API with Python.
 2. Write a unit test for your code.
 3. Create a Dockerfile.
 4. Create a GitHub Action workflow file to deploy your code on Cloud Run.
 5. Make the code acessible for anyone
 
-Cloud Run
+## Cloud Run
 To make your life easier, export these environment variables so that you can copy and paste the commands used here. Choose whatever name you want, but the $PROJECT_ID has to be a unique name, because project IDs can't be reused in Google Cloud.
 
 ```bash
